@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fernando Visuals | Proposta Debutante</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #fff7fa 0%, #fff1f6 45%, #fff8fc 100%);
+        color: #3b2d34;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .hero {
+        min-height: 78vh;
+        background-image: linear-gradient(rgba(53, 15, 39, 0.35), rgba(91, 22, 55, 0.6)),
+          url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .hero-content {
+        max-width: 900px;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+        line-height: 1.1;
+        color: #ffffff;
+        margin-bottom: 18px;
+      }
+
+      .hero p {
+        font-size: 20px;
+        color: #ffe7f1;
+        margin-bottom: 10px;
+      }
+
+      .brand {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        color: #ffd4e6;
+        margin-top: 8px;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 28px;
+        background: linear-gradient(135deg, #ff5ca8, #f04b96);
+        color: white;
+        padding: 16px 30px;
+        border-radius: 16px;
+        font-weight: bold;
+        font-size: 16px;
+        box-shadow: 0 14px 30px rgba(240, 75, 150, 0.25);
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        opacity: 0.95;
+      }
+
+      .intro {
+        padding: 48px 0 12px;
+      }
+
+      .intro-box {
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid #ffd9ea;
+        border-radius: 26px;
+        padding: 32px;
+        text-align: center;
+        box-shadow: 0 12px 30px rgba(255, 161, 200, 0.14);
+      }
+
+      .intro-box h2 {
+        color: #d9488d;
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      .intro-box p {
+        color: #6b5560;
+        font-size: 18px;
+      }
+
+      .section {
+        padding: 40px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+
+      .section-title h2 {
+        font-size: 40px;
+        color: #cf3f86;
+        margin-bottom: 8px;
+      }
+
+      .section-title p {
+        color: #7d6470;
+        font-size: 18px;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      .card {
+        background: #ffffff;
+        border-radius: 28px;
+        padding: 30px;
+        box-shadow: 0 16px 35px rgba(243, 164, 199, 0.16);
+        border: 1px solid #ffe2ef;
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 18px;
+      }
+
+      .tag.pink {
+        background: #ffe4f1;
+        color: #d9468d;
+      }
+
+      .tag.fuchsia {
+        background: #f8e6ff;
+        color: #b347c7;
+      }
+
+      .tag.rose {
+        background: #ffe6eb;
+        color: #df5d86;
+      }
+
+      .card h3 {
+        font-size: 28px;
+        line-height: 1.2;
+        color: #33262d;
+        margin-bottom: 18px;
+      }
+
+      .features {
+        list-style: none;
+        margin: 18px 0 24px;
+      }
+
+      .features li {
+        margin-bottom: 10px;
+        color: #66525d;
+        font-size: 17px;
+      }
+
+      .price-box {
+        background: #fff4f8;
+        border: 1px solid #ffd9e8;
+        border-radius: 20px;
+        padding: 18px;
+        margin-bottom: 18px;
+      }
+
+      .price-box small {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #d06595;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+
+      .price-box strong {
+        display: block;
+        font-size: 38px;
+        color: #cf3f86;
+        line-height: 1.1;
+      }
+
+      .price-box span {
+        color: #8a7280;
+        font-size: 16px;
+      }
+
+      .details p {
+        font-size: 15px;
+        color: #655560;
+        margin-bottom: 8px;
+      }
+
+      .details b {
+        color: #c73e82;
+      }
+
+      .full-width-card {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .highlight {
+        padding: 30px 0 60px;
+      }
+
+      .highlight-box {
+        background: linear-gradient(135deg, #ff62a7, #f04a96, #d94dd6);
+        color: white;
+        border-radius: 28px;
+        padding: 38px 24px;
+        text-align: center;
+        box-shadow: 0 18px 40px rgba(233, 93, 171, 0.25);
+      }
+
+      .highlight-box h3 {
+        font-size: 34px;
+        margin-bottom: 12px;
+      }
+
+      .highlight-box p {
+        max-width: 760px;
+        margin: 0 auto;
+        font-size: 18px;
+        color: #fff2f8;
+      }
+
+      .highlight-box .btn {
+        background: white;
+        color: #d63d88;
+        box-shadow: 0 14px 28px rgba(255, 255, 255, 0.2);
+      }
+
+      .note {
+        text-align: center;
+        color: #8b6d7a;
+        font-size: 14px;
+        padding-bottom: 30px;
+      }
+
+      @media (max-width: 900px) {
+        .hero h1 {
+          font-size: 38px;
+        }
+
+        .hero p {
+          font-size: 18px;
+        }
+
+        .section-title h2 {
+          font-size: 32px;
+        }
+
+        .cards {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .hero {
+          min-height: 72vh;
+        }
+
+        .hero h1 {
+          font-size: 30px;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+
+        .btn {
+          width: 100%;
+          max-width: 320px;
+        }
+
+        .intro-box,
+        .card,
+        .highlight-box {
+          padding: 24px 20px;
+        }
+
+        .card h3 {
+          font-size: 24px;
+        }
+
+        .price-box strong {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>O seu grande dia merece ser sentido de novo, para sempre.</h1>
+        <p>
+          Imagens com alma, direção e estética cinematográfica para transformar
+          momentos únicos em memória viva.
+        </p>
+        <div class="brand">Fernando Visuals • Fotógrafo & Videomaker</div>
+        <a class="btn" href="https://wa.me/5511972311688" target="_blank">Reservar minha data no WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="container">
+        <div class="intro-box">
+          <h2>Não é só sobre registrar uma festa.</h2>
+          <p>
+            É sobre guardar o brilho no olhar, a emoção do abraço e cada detalhe
+            que passa rápido demais no dia mais esperado da sua história.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Proposta Fotográfica</h2>
+          <p>Festa de Debutante</p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <span class="tag pink">Pacote 01</span>
+            <h3>Cobertura completa para viver o antes, o durante e o inesquecível.</h3>
+            <ul class="features">
+              <li>• Ensaio artístico pré-festa</li>
+              <li>• Making of no salão</li>
+              <li>• Cobertura da festa</li>
+              <li>• Cortesia exclusiva: Save the Date</li>
+              <li>• 400 fotos editadas</li>
+            </ul>
+            <div class="price-box">
+              <small>Investimento</small>
+              <strong>R$ 2.700</strong>
+              <span>à vista ou parcelado</span>
+            </div>
+            <div class="details">
+              <p><b>Pagamento:</b> 50% para travar a data e o restante até 3 dias antes do evento.</p>
+              <p><b>Entrega:</b> arquivos digitais via link.</p>
+              <p><b>Prazo:</b> até 10 dias úteis.</p>
+            </div>
+            <a class="btn" href="https://wa.me/5511972311688" target="_blank">Quero esse pacote</a>
+          </div>
+
+          <div class="card">
+            <span class="tag fuchsia">Pacote 02</span>
+            <h3>Essencial para registrar cada emoção da festa com beleza e verdade.</h3>
+            <ul class="features">
+              <li>• Cobertura da festa</li>
+              <li>• 300 fotos editadas</li>
+            </ul>
+            <div class="price-box">
+              <small>Investimento</small>
+              <strong>R$ 1.800</strong>
+              <span>à vista ou parcelado</span>
+            </div>
+            <div class="details">
+              <p><b>Pagamento:</b> 50% para travar a data e o restante até 3 dias antes do evento.</p>
+              <p><b>Entrega:</b> arquivos digitais via link.</p>
+              <p><b>Prazo:</b> até 10 dias úteis.</p>
+            </div>
+            <a class="btn" href="https://wa.me/5511972311688" target="_blank">Quero garantir minha data</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Proposta de Vídeo</h2>
+          <p>Cinematográfico, envolvente e memorável</p>
+        </div>
+
+        <div class="card full-width-card">
+          <span class="tag rose">Vídeo Cinematográfico</span>
+          <h3>Um trailer feito para fazer você reviver a energia do seu evento com impacto e emoção.</h3>
+          <ul class="features">
+            <li>• Produção com estabilizador de imagem</li>
+            <li>• Microfone de lapela</li>
+            <li>• Iluminação profissional</li>
+            <li>• Drone FPV</li>
+            <li>• Direção artística</li>
+            <li>• Trailer cinematográfico dinâmico</li>
+          </ul>
+          <div class="price-box">
+            <small>Investimento</small>
+            <strong>R$ 2.400</strong>
+            <span>à vista ou parcelado</span>
+          </div>
+          <div class="details">
+            <p><b>Prazo:</b> até 15 dias úteis.</p>
+            <p><b>Entrega:</b> arquivos via link Drive.</p>
+          </div>
+          <a class="btn" href="https://wa.me/5511972311688" target="_blank">Quero meu vídeo cinematográfico</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlight">
+      <div class="container">
+        <div class="highlight-box">
+          <h3>Datas especiais não esperam.</h3>
+          <p>
+            A reserva é confirmada com 50% de entrada. Isso garante prioridade na agenda e segurança para o seu grande dia.
+          </p>
+          <a class="btn" href="https://wa.me/5511972311688" target="_blank">Falar agora no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="note container">
+      Proposta criada para Fernando Visuals • 1 imagem no topo • pronta para GitHub Pages
+    </div>
+  </body>
+</html>
