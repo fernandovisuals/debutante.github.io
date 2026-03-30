@@ -30,9 +30,18 @@
       }
 
       .hero {
-        min-height: 78vh;
-        background-image: linear-gradient(rgba(53, 15, 39, 0.35), rgba(91, 22, 55, 0.6)),
-          url("topo.jpg"));
+  min-height: 78vh;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.6)),
+    url("sas.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
         background-size: cover;
         background-position: center;
         display: flex;
